@@ -32,6 +32,7 @@ html
 body
 {
     overflow-x: hidden;
+    /* height: 3000px; */
 }
 
 header
@@ -98,6 +99,63 @@ header .fa-bars
     display: none;
 }
 
+header .fa-times
+{
+    transform: rotate(180deg);
+}
+.home .content h1{
+    font-size: 5rem;
+    color: var(--black);
+}
+.home .content h1 span
+{
+    color: var(--blue);
+}
+.home .content h3
+{
+    font-size: 4rem;
+    color: var(--black);
+}
+.button
+{
+    height: 3.5rem;
+    width: 15rem;
+    background: var(--blue);
+    color: #fff;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: .5rem;
+    margin: 1rem 0;
+}
+
+.button::before
+{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    z-index: -1;
+    transition: .2s linear;
+}
+
+.button:hover:before
+{
+    top: 0%;
+}
+
+.button:hover
+{
+    box-shadow: .1rem .5rem var(--blue),
+                0 .3rem .5rem rgba(0,0,0,.3);
+}
+
 /*media queries*/
 @media (max-width:768px)
 {
@@ -112,15 +170,16 @@ header .fa-bars
     header .nav
     {
         position: fixed;
-        top: 50%; left: 50%;
+        top: -100rem; left: 50%;
         transform: translate(-50%,-50%);
         box-shadow: 0 0 0 100vh rgba(0,0,0,.3);
         border-radius: .5rem;
         border: .3rem solid var(--blue) !important;
         background: #fff;
         width: 95%;
+        opacity: 0;
     }
-    header .nav li
+    header .nav ul
     {
         width: 100%;
         flex-flow: column;
@@ -137,6 +196,12 @@ header .fa-bars
         font-size: 3rem;
         display: block;
     }
+    header .nav-toggle
+    {
+      top: 50%;
+      opacity: 1;
+    }
+
 
 
 }
