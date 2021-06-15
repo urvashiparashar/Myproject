@@ -37,19 +37,28 @@ body
 
 header
 {
-    width: 100%;
+    width: 90%;
     position: fixed;
     top: 0;
-    left: 0;
+    margin-left: 70px ;
+    margin-right: 70px;
+    align-self: center;
     padding: 2rem 1 rem;
     z-index: 1000;
+    background-color: #d4d9db;
+    height: 50px;
 }
+/* #header .container
+{
+    background: cornflowerblue;
+} */
 
 header .container
 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* background: #bcbfc0; */
 }
 
 header a
@@ -97,6 +106,7 @@ header .fa-bars
     color: var(--blue);
     cursor: pointer;
     display: none;
+   
 }
 
 header .fa-times
@@ -204,5 +214,30 @@ header .fa-times
 
 
 
+}
+
+.about
+{
+    background: #eee;
+}
+.about .content .box
+{
+    margin: 3rem 0;
+}
+.about .content .box h3
+{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.about .content .box h3 i
+{
+    padding: 0 1rem;
+    color: var(--blue);
+}
+.about .content .box p
+{
+    font-size: 1.7rem;
+    padding-left: 6rem;
+    color: #666;
 }
 
